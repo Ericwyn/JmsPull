@@ -45,13 +45,11 @@ func startHttpServer() {
 
 		if realTimeFlag == "1" {
 			c.String(200, conf.GetRealTimeSubLink(linkType))
+			return
 		} else {
 			c.String(200, conf.GetBuffSubLink(linkType))
+			return
 		}
-
-		c.String(200, conf.GetBuffSubLink(linkType))
-		return
-
 	})
 
 	// 查看系统状态
