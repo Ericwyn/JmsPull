@@ -14,6 +14,7 @@ type ConfigKey struct {
 	DomainSubLink           string
 	DomainSubLinkUpdateTime string
 	ApiKey                  string
+	CornInterval            string
 }
 
 type SystemHealthMsg struct {

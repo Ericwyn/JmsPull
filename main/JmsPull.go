@@ -14,7 +14,7 @@ func main() {
 	conf.InitConfig()
 
 	// 开始定时获取配置
-	corn.RunCorn()
+	corn.RunCorn(viper.GetInt(conf.ConfigKey.CornInterval))
 
 	// 开启服务
 	startHttpServer()

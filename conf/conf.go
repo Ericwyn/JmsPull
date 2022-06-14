@@ -35,6 +35,7 @@ var ConfigKey = define.ConfigKey{
 	DomainSubLink:           "domain-sub-link",
 	DomainSubLinkUpdateTime: "domain-sub-link-update-time",
 	ApiKey:                  "api-key",
+	CornInterval:            "corn-interval",
 }
 
 // viper 的 key
@@ -222,6 +223,8 @@ func loadConfig() {
 	viper.SetDefault(configKeyJmsId, "jms-sub-id")
 	viper.SetDefault(ConfigKey.ApiKey, "JmsPull 接口 key")
 
+	viper.SetDefault(ConfigKey.CornInterval, 5)
+
 	viper.SetDefault(ConfigKey.IpSubLinkUpdateTime, "2022-06-14 17:58:00")
 	viper.SetDefault(ConfigKey.IpSubLink, "错误: 尚未初始化")
 	viper.SetDefault(ConfigKey.DomainSubLinkUpdateTime, "2022-06-14 17:58:00")
@@ -258,6 +261,8 @@ func printConfigs() {
 	configList := []string{
 		configKeyJmsServer,
 		configKeyJmsId,
+
+		ConfigKey.CornInterval,
 
 		ConfigKey.IpSubLink,
 		ConfigKey.IpSubLinkUpdateTime,

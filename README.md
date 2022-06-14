@@ -22,6 +22,7 @@
 
 ```yaml
 api-key: JmsPull 接口的 key 参数
+corn-interval: 5
 domain-sub-link: '最近一次拿到的订阅连接(域名服务器)'
 domain-sub-link-update-time: "2022-06-14 17:58:00"
 ip-sub-link: '最近一次拿到的订阅连接(ip服务器)'
@@ -31,7 +32,7 @@ jms-server: justmysocks 订阅链接里面的 server 参数
 ```
 
 需要进行配置的是 `jms-id`, `jms-server`, `api-key` 三个参数
-
+corn 自动拉取的间隔可以通过 corn-interval 设置，单位分钟，默认 5 分钟拉取一次 jms 配置
 
 ## API 接口
 

@@ -9,11 +9,11 @@ import (
 
 var cornFirstFlag = true
 
-func RunCorn() {
+func RunCorn(interval int) {
 	s := gocron.NewScheduler(time.UTC)
 
 	// 每 28 分钟刷新一次配置
-	s.Every(5).Minutes().Do(func() {
+	s.Every(interval).Minutes().Do(func() {
 		log.I("开始获取最新订阅数据")
 		// 分别获取域名/ip 两种订阅数据
 		conf.RunCornJobOnce(true)
