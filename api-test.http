@@ -23,7 +23,7 @@ Accept: application/json
 ###
 
 # 通过多个镜像地址，拿到实时最新的订阅链接 (域名)
-GET http://127.0.0.1:38888/api/sublink?key={{api-key}}&type=d&type=1
+GET http://127.0.0.1:38888/api/sublink?key={{api-key}}&now=1&type=d
 Accept: application/json
 
 ###
