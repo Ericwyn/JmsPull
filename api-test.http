@@ -1,0 +1,35 @@
+# 获取最近一次拿到的订阅链接 (IP)
+GET http://127.0.0.1:38888/api/sublink?key={{api-key}}
+Accept: application/json
+
+###
+
+# 获取最近一次拿到的订阅链接 (域名)
+GET http://127.0.0.1:38888/api/sublink?key={{api-key}}&type=d
+Accept: application/json
+
+###
+
+# 获取最近一次拿到的订阅链接 (IP + 域名), jmsPull 解析之后自己做的拼接
+GET http://127.0.0.1:38888/api/sublink?key={{api-key}}&type=all
+Accept: application/json
+
+###
+
+# 通过多个镜像地址，拿到实时最新的订阅链接 (IP)
+GET http://127.0.0.1:38888/api/sublink?key={{api-key}}&now=1
+Accept: application/json
+
+###
+
+# 通过多个镜像地址，拿到实时最新的订阅链接 (域名)
+GET http://127.0.0.1:38888/api/sublink?key={{api-key}}&type=d&type=1
+Accept: application/json
+
+###
+
+# 查看目前各个链接的最新拉取时间
+GET http://127.0.0.1:38888/api/health?key={{api-key}}
+Accept: application/json
+
+###
