@@ -54,8 +54,8 @@ func GetBuffSubLink(linkType define.SubLinkType) string {
 		}
 		return SubMsg.DomainLink
 	} else if linkType == TypeAll {
+		IpMsg := GetBuffSubLink(TypeIp)
 		domainMsg := GetBuffSubLink(TypeDomain)
-		IpMsg := GetBuffSubLink(TypeDomain)
 
 		// 解析出来然后重新构造
 		ipDecode := vmess.Base64Decode(IpMsg)
